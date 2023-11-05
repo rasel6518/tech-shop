@@ -1,26 +1,28 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
-import NewProducts from "./NewProducts";
-import BestSeller from "./BestSeller";
+
 
 
 const Home = () => {
 
-    const brands = useLoaderData()
+    const books = useLoaderData()
+
+    console.log(books);
 
     return (
         <div className="w-9/12 mx-auto">
             <Banner></Banner>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 my-10 gap-5  ">
+            <div className="grid md:grid-cols-2  my-10 gap-5  ">
                 {
-                    brands?.map(brand =>
-                    (<div key={brand._id}>
+                    books?.map(book =>
+                    (<div key={book.id}>
 
-                        <Link to={`/${brand.name.toLowerCase()}`}>
-
-                            <div className="w-full h-40 m-5">
-                                <img className="w-full h-full" src={brand.image_url} alt="" />
-                                <p className="text-center font-serif font-extrabold text-3xl">{brand.name}</p>
+                        <Link>
+                            {/*  to={`/${book.name.toLowerCase()}`} */}
+                            <div className="w-full  h-52 m-5 flex flex-col items-center">
+                                <img className="w-full  h-5/6  " src={book.image} alt="" />
+                                <p className="text-center font-serif font-extrabold text-3xl">{book.categoryName}</p>
+                                <button className="btn hover:bg-green-500 text-white bg-[#71AE44]">Explore</button>
                             </div>
 
                         </Link>
@@ -31,9 +33,7 @@ const Home = () => {
                 }
             </div>
 
-            <NewProducts></NewProducts>
 
-            <BestSeller></BestSeller>
 
         </div>
     );

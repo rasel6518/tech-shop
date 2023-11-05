@@ -4,7 +4,7 @@ import { MdStarRate } from 'react-icons/md';
 
 
 import { Link, useLoaderData } from 'react-router-dom';
-import Ads from '../Ads/Ads';
+
 
 const Apple = () => {
 
@@ -15,7 +15,7 @@ const Apple = () => {
     if (!appleProducts || appleProducts.length === 0) {
         return (
             <div>
-                <Ads />
+
                 <p className="text-center text-xl font-semibold mt-5">
                     No  Apple products available.
                 </p>

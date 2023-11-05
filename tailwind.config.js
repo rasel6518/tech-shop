@@ -10,6 +10,7 @@ export default {
         'priColor': '#3A6B35',
         'secColor': '#CBD18F',
         'thirColor': '#E3B448',
+        'btn-bg': '#71AE44',
       }
     },
   },

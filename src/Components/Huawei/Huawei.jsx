@@ -1,7 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 
 import { MdStarRate } from 'react-icons/md';
-import Ads from "../Ads/Ads";
+
 
 const Huawei = () => {
     const brands = useLoaderData();
@@ -11,7 +11,7 @@ const Huawei = () => {
     if (!huaweiProducts || huaweiProducts.length === 0) {
         return (
             <div>
-                <Ads />
+
                 <p className="text-center text-xl font-semibold mt-5">
                     No Huawei products available.
                 </p>

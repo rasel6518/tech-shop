@@ -25,6 +25,9 @@ const Banner = () => {
     return (
         <div data-aos="fade-up" className="w-full" >
             <Slider className=" mx-auto  h-[80vh] " {...settings}>
+
+                {/* banner img */}
+
                 <div className="relative">
                     <img className="rounded-xl w-full h-[75vh]" src="https://i.ibb.co/41t5SwD/asian-boy-library-room-school.jpg" alt="Slide 1" />
                     <div className="absolute  top-0 right-0 w-1/2 h-full bg-black opacity-50 rounded-xl flex flex-col justify-center items-center">

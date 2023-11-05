@@ -10,8 +10,6 @@ import {
 import Root from './Root';
 import Home from './Components/Home/Home';
 
-import Apple from './Components/Apple/Apple';
-import Huawei from './Components/Huawei/Huawei';
 
 
 
@@ -26,17 +24,9 @@ const router = createBrowserRouter([
         element: <Home></Home>,
         loader: () => fetch('books.json')
       },
-      {
-        path: "/apple",
-        element: <Apple></Apple>,
-        loader: () => fetch('https://brands-prouduct-server.vercel.app/brands')
-      },
 
-      {
-        path: "/huawei",
-        element: <Huawei></Huawei>,
-        loader: () => fetch('https://brands-prouduct-server.vercel.app/brands')
-      },
+
+
 
     ],
   },
